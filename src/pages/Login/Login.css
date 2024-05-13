@@ -1,0 +1,240 @@
+/* Log.css */
+.login-main {
+  background-color: #fff;
+  width: 90%;
+  height: 80%;
+}
+
+.login-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: linear-gradient(to right, #8e44ad 35%, #8084f5 65%);
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+  border: none;
+}
+
+.login-column {
+  border: none;
+  height: 80%;
+  width: 40vw;
+  border-radius: none;
+  overflow: hidden;
+  margin-left: -0.75rem;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  background-color: #8e44ad;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.login-box {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-acc {
+  font-size: 0.875rem;
+}
+
+.login-sign  {
+  color: rgb(174, 17, 222);
+  cursor: pointer;
+  text-align: right;
+}
+
+.login-label {
+  font-weight: bold;
+
+}
+
+.login-input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.login-checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.login-checkbox input {
+  margin-right: 0.5rem;
+}
+
+.login-help {
+  color: red;
+  margin-top: 0.5rem;
+}
+
+.login-image {
+  text-align: center;
+}
+
+.login-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  
+}
+
+.login-field {
+  margin-bottom: 10px;
+}
+
+.login-control {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.login-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-sign:hover {
+  text-decoration: underline;
+  color: navy;
+}
+/* Signup.css */
+.signup-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #9e36cb;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.signup-container h1{
+  text-align: center;
+}
+.signup-title {
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color:#7f1c92
+}
+.signup-field {
+  margin-bottom: 15px;
+}
+.signup-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.signup-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+.signup-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #7f1c92;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.signup-button:hover {
+  background-color: #5d117d;
+}
+.signup-help {
+  color: red;
+  margin-top: 5px;
+}
+.signup-sign {
+  text-decoration: none;
+  color: #a221c5;
+}
+.signup-sign:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 480px) {
+  .text {
+    font-size: 16px;
+  }
+}
+/* 
+  .login-social-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .login-social-button ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+  }
+  
+  .login-social-button li {
+    width: 50%;
+  }
+  
+  .login-social-button button {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+  }
+  
+  .login-social-button .google {
+    color: rgb(222, 44, 44);
+    background-color: white;
+    border: 1px solid rgb(222, 44, 44);
+  }
+  
+  .login-social-button .facebook {
+    color: rgb(15, 42, 112);
+    background-color: white;
+    border: 1px solid rgb(15, 42, 112);
+  }
+  
+  .login-social-button button:hover {
+    opacity: 0.8;
+  }
+ 
+  */

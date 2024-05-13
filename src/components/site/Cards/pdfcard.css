@@ -1,0 +1,86 @@
+.pdfcard-live-button{
+  background: #ec4899;
+  color:white;
+  border:none;
+}
+
+.pdfcard-demo-button{
+  background: #db2777;
+  color:white;
+  border:none;
+}
+.pdf-card-header{
+  color:#ec4899;
+}
+.smart-pdf-card .card-header{
+  border-bottom: 1px solid #ec4899;
+}
+.smart-pdf-card{
+  transition: box-shadow 0.3s ease;
+}
+.smart-pdf-card:hover{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.smart-pdf-card .card-content .content{
+  text-align: justify;
+  font-size: 0.9em;
+}
+/*
+.merge-card .card-sample {
+  background: white;
+  width: 370px;
+}
+.merge-card .card-sample .card-header {
+  border-style: ridge;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.merge-card .card-sample .card-header .card-header-title {
+  color: #db2777;
+}
+
+.card-sample .card-image {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.card-sample .card-content {
+  padding-top: 10px;
+  height: 70px;
+  width: 100%;
+}
+.card-sample .card-content .content {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #404040;
+}
+.card-sample .card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  padding-top: 10px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.card-sample .card-footer #first {
+  width: 90px;
+  background: #ec4899;
+  cursor: wait;
+}
+
+.card-sample .card-footer .button {
+  width: 90px;
+  background: #db2777;
+  color: white;
+  cursor: wait;
+}
+.card-sample .card-footer #icno {
+  font-size: 15px;
+  color: white;
+}
+.card-sample .card-footer #name {
+  padding-left: 6px;
+}
+*/

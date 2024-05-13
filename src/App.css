@@ -1,0 +1,33 @@
+.smart-modal .modal-card-head {
+    padding: 0.5em;
+    background:#fff;   
+}
+.smart-modal .modal-card-title{
+    color: #000;;
+}
+.smart-modal .modal-card-foot{
+    padding:0.5em;
+}
+.smart-justify-left{
+    justify-content: left !important;
+}
+.smart-justify-right{
+    justify-content: right !important;
+}
+.smart-modal-80 .modal-card{
+    width:80%;
+}
+.smart-modal-90 .modal-card{
+    width:80%;
+}
+.smart-modal-70 .modal-card{
+    width:80%;
+}
+.smart-modal-60 .modal-card{
+    width:80%;
+}
+
+
+
+
+

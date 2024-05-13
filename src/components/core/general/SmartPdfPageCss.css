@@ -1,0 +1,33 @@
+.smart-pdf-box{
+    background-color: #000;
+}
+.react-pdf__Page{
+    background-color: #000 !important;
+    margin-left: 20%;
+    padding-bottom: 10px;
+    margin-top:10px;
+}
+.smart-pdf-input-boxes{
+    position: absolute;
+    top:200px;
+    width:100px;
+    height:100px;
+    border:1px solid red
+}
+.react-pdf__Page__annotations{
+    display: none;
+}
+.smart-pdf-pages-short{
+    max-height: 900px;
+    overflow-y: scroll;
+}
+.smart-pdf-details{
+    position: fixed;
+    width:30%;
+    height:100vh;
+    top:0;
+    right:0;
+}
+.smart-pdf-details .content{
+    padding:2em;
+}

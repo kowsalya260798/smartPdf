@@ -1,0 +1,90 @@
+.card-upload .card-header .table-style {
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    width: 100%;
+    padding: 20px;
+    min-height: 200px;
+}
+
+.card-upload .card-header .table-style table {
+    width: 100%;
+    
+}
+
+.card-upload .table-style .table td {
+    color: #DB2777;
+    border-bottom: 1px solid #EC4899;
+   
+}
+
+.card-upload .table-style .table .name {
+   width:60%;
+ 
+}
+.card-upload .table-style .table .size {
+  width:30%;
+  font-size: small;
+  padding-top: 12px;
+  
+ }
+ .card-upload .table-style .table .remove {
+    width:10%;
+ }
+
+.card-upload .table-style .table .remove .btn {
+    color: #DB2777;
+    border: none;
+    background: transparent;
+}
+
+.card-upload .button {
+    border-radius: 8px;
+    border-color: #DB2777;
+    height: 100px;
+    width: 330px;
+
+}
+
+.card-upload .file-upload {
+    padding-top: 6px;
+    padding-bottom: 15px;
+    border-style: groove;
+    border-left: none;
+    border-right: none;
+    
+}
+#file-upload {
+    display: none;
+    
+}
+.file-upload .button {
+    color: #DB2777;
+    font-weight: bold;
+    width: 100%;
+}
+.file-upload .button .bold{
+    color:  #EC4899
+    
+}
+.card-upload .card-footer {
+    
+    width: 100%;
+}
+
+.card-upload .merge-button {
+    padding-top: 4px;
+    width: 100%;
+}
+.card-upload .merge-button button {
+    width: 100%;
+    height: 33px;
+    background: #DB2777;
+    color: white;
+    font-weight: bolder;
+    border: 2px solid #DB2777;
+    border-radius: 4px;
+}
+.smart-pdf-result-card .icon{
+    font-size: 2em;
+}

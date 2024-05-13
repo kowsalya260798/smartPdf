@@ -1,0 +1,108 @@
+
+.pdf-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.pdf-table th{
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  background-color: #8e44ad;
+}
+.pdf-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+ 
+}
+
+
+.pdf-pagination {
+  margin-top: 20px;
+  align-items: right;
+}
+
+.pdf-pagination button {
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 8px 12px;
+  margin-right: 5px;
+  cursor: pointer;
+
+}
+
+.pdf-pagination button.active {
+  background-color: #8e44ad;
+  color: #fff;
+}
+
+.pdf-pagination button:hover {
+  background-color: #ddd;
+}
+.pdf-button-container {
+  display: flex;
+  justify-content: flex-end;
+
+}
+/*
+button {
+  padding: 5px 20px;
+  background-color: #623fed;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+*/
+
+
+.pdf-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.pdf-label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+#pdf-select {
+  padding: 5px;
+  border: 1px solid #c48af3;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  
+}
+.pdf-search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.pdf-search input[type='text'] {
+  width: 800px; 
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  
+}
+
+.pdf-search input[type='text']:focus {
+  border-color: #d860f6;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.search-icon {
+  padding: 0 8px;
+  color: #aaa;
+}
+.pdf-search input[type='text']::placeholder {
+  color: #aaa;
+}

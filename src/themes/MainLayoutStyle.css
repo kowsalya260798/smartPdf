@@ -1,0 +1,55 @@
+body{
+    background: #000;
+}
+.smart-mainlayout-middle{
+    min-height: 500px;
+    background-color: #fff;
+}
+
+.full-main{
+    width: 100%;
+    background-image: linear-gradient(to right,  #5200cc ,  #cc66cc);
+    
+}
+.smart-pdf-footer{
+    background-color: #5200cc;
+    min-height: 50px;
+}
+.value-main{   
+    color: white;
+    height: 50vh; 
+    position: relative;
+}
+
+.value-main h1{
+    font-size: 28px;
+    font-weight: bolder;
+    padding-right: 19px;   
+    padding-left: 160px;
+}
+
+.value-main p{  
+    padding-left: 160px;
+}
+.value-main .video-but{
+    padding-left: 160px;
+}
+.value-main .video-but button{
+    border-radius: 50%;
+    background:  #ff6699;
+    color: white;
+    width:3%;
+    
+}  
+.full-main .value-main  img{
+    border-top-left-radius: 350px 190px;
+    border-bottom-left-radius: 125px;
+    border-bottom: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 50%; 
+    max-height: 100%;
+    height: auto; 
+    display: block;
+}

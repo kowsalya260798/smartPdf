@@ -1,0 +1,48 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18.x
+
+      - name: Install dependencies
+        run: |
+          npm i
+
+      - name: Build Angular app
+        run: |
+          CI=false npm run build
+          ls -l
+          pwd
+      - name: Disable Host Key Verification
+        run: |
+          mkdir -p ~/.ssh
+          echo "StrictHostKeyChecking no" >> ~/.ssh/config
+          chmod 600 ~/.ssh/config
+      - name: Configure SSH environment
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+      - name: Deploy to remote machine
+        run: |
+          pwd
+          ls -l
+          # Replace remote-user and remote-host with your SSH credentials
+          #ssh root@134.209.232.225 'mkdir -p /var/www/igcdoc'
+          scp -r /home/runner/work/smartpddf_frontend/smartpddf_frontend/build/* github@195.35.23.133://opt/pdfpython/html
