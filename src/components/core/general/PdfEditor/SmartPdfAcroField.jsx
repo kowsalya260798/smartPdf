@@ -32,8 +32,6 @@ const SmartPdfAcroField = ({ pageNumber,pdfFields,setFields }) => {
 
   const getStyle=(index)=>{
     let item = fields[index] ? fields[index] : {};
-    console.log("fields " , fields);
-    console.log("item " , item);
     return {
       left: item?.left + "px",
       top: item?.top + "px",
@@ -43,26 +41,35 @@ const SmartPdfAcroField = ({ pageNumber,pdfFields,setFields }) => {
   }
 
   const handleResize = (index, position, size) => {
-    const updatedBox = [...fields];
-    updatedBox[index] = {
-      ...updatedBox[index],
-      ...size,
-    };
-    console.log("on resize -- upadted",updatedBox )
-    setItemFields(updatedBox);
-    setFields(updatedBox);
+   
+    setItemFields(prevData => {
+      // Create a new array with the updated object
+      const updatedData = [...prevData];      
+      // Update the specified property of the object at the given index
+      updatedData[itemIndex] = {
+        ...updatedData[itemIndex],
+        ...size
+      };
+      setFields([...updatedData])
+      return updatedData;
+    });
   };
 
   const handleDrag = (index, position) => {
-    const updatedBox = [...fields];
-    updatedBox[index] = {
-      ...updatedBox[index],
-      top : position.y,
-      left : position.x,
-    };
-    console.log("on drag -- upadted",updatedBox )
-    setItemFields(updatedBox);
-    setFields(updatedBox);
+
+    setItemFields(prevData => {
+      // Create a new array with the updated object
+      const updatedData = [...prevData];      
+      // Update the specified property of the object at the given index
+      updatedData[itemIndex] = {
+        ...updatedData[itemIndex],
+        top : position.y,
+        left : position.x,
+      };
+      setFields([...updatedData])
+      return updatedData;
+    });
+
   };
 
  
@@ -75,34 +82,36 @@ const SmartPdfAcroField = ({ pageNumber,pdfFields,setFields }) => {
       smartFields["fields"] !== undefined ? smartFields["fields"] : []; 
       */
     return fields.map((item, index) => (
-      <div 
-        key={index}
-        className="smart-pdf-input-boxes"
-        style={getStyle(index)}
-        onClick={() => setItemIndex(index)}
-        ></div>
-      
-      // <Rnd 
-      //   bounds="parent"
+      // <div 
       //   key={index}
-      //   default={{x: item.left, y: item.top, width: item.width, height: item.height}}
-      //   style={{border: "1px solid red"}}
+      //   className="smart-pdf-input-boxes"
+      //   style={getStyle(index)}
       //   onClick={() => setItemIndex(index)}
-      //   // style={getStyle(index)}
-      //   // className="smart-pdf-input-boxes"
+      //   >
+      //   {console.log("smartPdfAcro Fields.. ", fields)}
+      // </div>
+      
+      <Rnd 
+        bounds="parent"
+        key={index}
+        default={{x: item.left, y: item.top, width: item.width, height: item.height}}
+        style={{border: "1px solid red"}}
+        onClick={() => setItemIndex(index)}
+        // style={getStyle(index)}
+        // className="smart-pdf-input-boxes"
 
-      //   onResize={(e, direction, ref, delta, position) =>
-      //     handleResize(index, position, {
-      //       width: ref.offsetWidth,
-      //       height: ref.offsetHeight,
-      //     })
-      //   }
-      //   onDragStop={(e, d) => handleDrag(index, d)}
-      // >
-      //   {console.log("fields",fields)}
-      //   {console.log("pdfFields",pdfFields)}
-      //   {item.name}
-      // </Rnd>
+        onResize={(e, direction, ref, delta, position) =>
+          handleResize(index, position, {
+            width: ref.offsetWidth,
+            height: ref.offsetHeight,
+          })
+        }
+        onDragStop={(e, d) => handleDrag(index, d)} 
+      >
+        {console.log("smartPdfAcro Fields.. ", fields)}
+        {console.log("smartPdfAcro pdfFields.. ",pdfFields)}
+        {item.name}
+      </Rnd>
     ));
   };
 

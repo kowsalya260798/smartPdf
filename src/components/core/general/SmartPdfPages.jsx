@@ -56,6 +56,12 @@ const SmartPdfPages = ({ pdfFile, fields, saveTemplate }) => {
     let item = type == "checkbox" ? getCheckBoxItem() : getDummyItem();
     singlePageData.push(item);
     updatedData[pageNumber - 1] = singlePageData;
+
+    console.log("added ..updatedData",updatedData);
+    console.log("added ..updatedData[pageNumber - 1]",updatedData[pageNumber - 1]);
+    console.log("added..item",item);
+    console.log("[...updatedData]",[...updatedData]);
+
     setFields([...updatedData]);
   }
 
@@ -88,8 +94,6 @@ const SmartPdfPages = ({ pdfFile, fields, saveTemplate }) => {
   }
 
   const saveTemplateData = () => {
-    //console.log("PDF Fields " , pdfFields);
-    //console.log("tempalte " , pdfFile)
     saveTemplate(pdfFields)
   }
 
@@ -131,6 +135,7 @@ const SmartPdfPages = ({ pdfFile, fields, saveTemplate }) => {
                 ref={parentRef}
               >
                 <SmartPdfAcroField pageNumber={pageNumber} pdfFields={pdfFields} setFields={setFields} />
+                {console.log("pdfFields...2",pdfFields)}
               </Page>
             </div>
           </div>

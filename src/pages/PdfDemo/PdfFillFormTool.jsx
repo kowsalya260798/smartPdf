@@ -7,6 +7,9 @@ import { DownLoadPdf, FormatFileSize } from "../../services/fileService";
 import SmartCodeDisplay from "../../components/core/general/SmartCodeDisplay";
 import SmartPdfViewer from "../../components/core/general/SmartPdfViewer";
 import SmartPdfPages from "../../components/core/general/SmartPdfPages";
+import { ErrorBoundary } from "react-error-boundary";
+// import { log } from "console";
+import FallBack from "./FallBack";
 
 const PdfFillFormTool = () => {
   const [data, setData] = useState([]);
@@ -23,7 +26,6 @@ const PdfFillFormTool = () => {
     
       //setData([newInput]);    
       handleMergeClick(selectedFile);
-      //
     } else {
       showNotification(
         "error",
@@ -57,10 +59,10 @@ const PdfFillFormTool = () => {
     const subscription = post("pdfform/get_fields", data_post).subscribe(
       (response) => {
         setLoading(false);
-        setFields(response.data.data);  
+        setFields(response.data.data);
       //  showNotification("success", "Compressed Successfully");
         setInput(selectedFile);
-      //  setResult(true);
+      //  setResult(true);  
        // setContent(response.data.data);
       }
     );
@@ -119,7 +121,6 @@ const PdfFillFormTool = () => {
             onClick={() => handleDelete(index)}
             className="btn"
           >
-          jytjyv
             <i class="fa fa-trash" aria-hidden="true"></i>
           </button>
         </td>
@@ -175,7 +176,10 @@ const PdfFillFormTool = () => {
             </label>
           </div>
         </div>
+      
         {input && <SmartPdfPages pdfFile={input} fields={fields} saveTemplate={saveFieldsRequest} />}
+        {console.log("fst fieldas",fields)}
+
       </div>
     );
   };
@@ -226,8 +230,10 @@ const PdfFillFormTool = () => {
 
   return (
     <>
-      {result == false && dispalyUploadCard()}
-      {result && resultCard()}
+      <ErrorBoundary FallbackComponent={FallBack}>
+        {result == false && dispalyUploadCard()}
+        {result && resultCard()}
+      </ErrorBoundary>
     </>
   );
 };
